@@ -1,0 +1,136 @@
+In conditional Rendering we can perform any condition in the react js there are lot of ways to implement or perform condtional rendering which is jsut similar with js.
+
+
+Conditional Rendering:-is the part of the programming in react js where it is provide true or false 
+statements.In react there are many types of conditional rendering available.
+
+  1.If...else
+  2.Ternary Operator
+  3.By List
+
+
+1.if___else
+
+
+import { Component } from "react";
+
+class Condr extends Component{
+    constructor(props){
+        super();
+        this.state={Login:true}
+    }
+    render(){
+        if(this.state.Login){
+            return(<div>This is True Part</div>)
+        }
+    
+    else{
+        return(<div>This is False Part</div>)
+    }
+};
+}
+export default Condr;
+
+
+  2.Ternary Operator
+
+   Condition?true:false;
+
+import { Component } from "react";
+
+class Condr extends Component{
+    constructor(props){
+        super();
+        this.state={Login:false}
+    }
+    render(){
+       return this.state.Login?<div>True</div>:"This is False Part";
+    }
+};
+
+export default Condr;
+
+
+3.
+
+
+function Condr(){
+    let colors=['pink','red','black','green','blue'];
+       return <div>
+       <h1>{colors[0]}</h1>
+       <h1>{colors[1]}</h1>
+       <h1>{colors[2]}</h1>
+       <h1>{colors[3]}</h1>
+       <h1>{colors[4]}</h1>
+       </div>
+    
+};
+
+export default Condr;
+
+
+
+4.Array.map
+
+function Condr(){
+    let colors=['pink','red','black','green','blue'];
+       return <div>
+       {colors.map(e=><h1>{e}</h1>)}
+       </div>
+    
+};
+
+export default Condr;
+
+
+
+
+---------------------
+
+function Condr(){
+    let products=[{
+        ProductName:'Mobile',
+        ProductCost:20000,
+        Avialability:"yes"
+    },{
+    ProductName:'Tv',
+    ProductCost:26000,
+    Avialability:"No"
+    },
+    {
+
+        ProductName:'WashingMachine',
+        ProductCost:15000,
+        Avialability:"yes"
+    },{
+        ProductName:'Freeze',
+        ProductCost:10000,
+        Avialability:"No"
+    },{
+        ProductName:'MusicPlayer',
+        ProductCost:25000,
+        Avialability:"yes"
+    },{
+        ProductName:'Laptop',
+        ProductCost:30000,
+        Avialability:"yes"
+}];
+let ProdutcList =products.map(e=><h1>ProductName :{e.ProductName},Product Cost: {e.ProductCost} is avialable :{e.Avialability}</h1>);
+   return(
+    <div>
+    {ProdutcList}
+    </div>
+   )  
+    
+};
+
+export default Condr;
+
+
+
+
+
+
+
+
+
