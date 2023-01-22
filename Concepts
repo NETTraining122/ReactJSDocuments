@@ -1,0 +1,65 @@
+1 
+React-JS Overview 
+What is the React-JS 
+React-JS is an Open Source JavaScript library which is used for  creating dynamic and interactive user interfaces (UI  Components) for web applications and many other  applications. 
+React-JS was created by Jordan Walke, who is a software  engineer at Facebook, 
+
+
+
+Features of the React-JS 
+∙ It is more flexible compare to other JS frameworks. 
+∙ It is provide declarative and efficient approach for all  types of the applications. 
+∙ It is completely follow the component based approach  which is more convenient to handle large applications. 
+∙ It is provide server side headlining easily.
+2 
+
+
+
+History of the React-JS 
+∙ React-JS was first deployed by Jordan on Facebook's  News in 2011. 
+∙ After some time it were applied on Instagram in 2012. ∙ It was open-sourced at JSConf US in May 2013. 
+∙ React Native, was announced at Facebook’s in February  2015 for android & IOS. 
+∙ On April 18, 2017, Facebook announced React Fibre,  which is a new core algorithm of React library for  building user interfaces. 
+3 
+How Does React JS Work? 
+✔ React-JS works with virtual Dom which is used for faster  rendering and everything like header, footer,etc is made  by its components. 
+✔ So using React-JS, you can update anything on the web  page without reloading it. 
+✔ Internal Working in React-JS 
+✔ React-JS creates a virtual DOM and keeps all those  components data in that virtual DOM then renders data  on the web page. 
+✔ If we want to change data of any components then  React-JS creates again a new Virtual DOM for that data  and compares it with the old virtual DOM. 
+4 
+✔ After that React-JS finds changes in components and  renders only those changes on the web page.  
+What is the Component? 
+
+
+∙ In React-JS we can create multiple re-usable 
+components which is updated every time and it is the  power of React-JS.  
+∙ A component is a building block of React-JS which is the  containers, div, or sections with proper view structures  & data. 
+For example header, footer, sidebar, image gallery, table, list,  or form etc.  
+All these parts of the web page can be created by  components. 
+5
+
+
+
+Famous Applications Using React-JS 
+1. Facebook 
+2. Instagram 
+3. Netflix 
+4. WhatsApp 
+5. Myntra 
+6. Discord 
+
+
+
+Features & Main Concepts of the React-JS 
+1. JSX 
+2. Components  
+3. Components Life Cycle 
+4. Props & State 
+5. Events  
+6. Events with State 
+7. Conditional Rendering 
+8. Loops in React-JS 
+9. Data Binding in React-JS 
+Etc.
+6
