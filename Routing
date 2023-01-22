@@ -1,0 +1,183 @@
+1 
+React-JS Routing
+Routing? 
+Routing is the concepts where we can   move between different parts of an application when a user redirect or launch  a URL or clicks an element within the application.
+React-Router? 
+React Router is a Javascript routing library. By using the React.Router package, you can add server-side route resolution by deferring to React Router.
+
+Route?
+
+This component is used to create a react js routing at a particular location via a URL. The component is mounted on URLs on pages that correspond to the specific route that is set up in the configuration props for the route.
+
+// define our initial route.
+
+path – The route for this route is active
+component – The part that defines the vision of the route
+BrowserRouter
+
+
+React Router needs to be both aware and in control of your app's location. 
+The way it does this is with its BrowserRouter component.
+
+
+import ReactDOM from 'react-dom'
+import * as React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App`
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+, document.getElementById('app))
+class App extends React.Component { 
+  render() { 
+  return (
+    <Router>
+      <Route path="/" component={Home} />
+    </Router>
+   ); 
+
+
+React Router Links
+
+To allow the   users to redirect between two routes we’ll have to include an anchor tag (<a/>).
+
+
+
+import { BrowserRouter as Router, Route, Link } from "react-routerdom"; 
+const Home = () => (
+  <div>
+  <h1>Home</h1>
+  <Link to="/about"> Page Link</Link>
+  </div> 
+); 
+const About = () => (
+  <div>
+   <h1>About</h1>
+   <Link to="/">Home Page Link</Link>
+  </div>
+ ); 
+
+The <Switch/> component only renders the first match route it locates.
+
+Routes
+
+Routes will start to do more work like enabling intelligent rendering and relative paths. 
+
+import { Routes, Route } from "react-router-dom";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
+
+Implementation of React Routing
+
+Step-1
+
+Install bellow packages
+
+npm install react-router
+npm install react-router-dom
+npm install react-bootstrap(for bootstrap)
+
+Step-2 
+
+Add below parts on App.js
+
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+
+class App extends Component {
+  render() {
+    return (
+    <Router>
+        <div>
+          <h2>React Routing</h2>
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <ul className="navbar-nav mr-auto">
+            <li><Link to={'/'} className="nav-link"> Home </Link></li>
+            <li><Link to={'/Contact'} className="nav-link">Contact</Link></li>
+            <li><Link to={'/About'} className="nav-link">About</Link></li>
+          </ul>
+          </nav>
+          <hr />
+          <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/Contact' component={Contact} />
+              <Route path='/About' component={About} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+}
+
+export default App;
+
+Step-3 Create following pages like.. 
+
+
+
+Home.js
+
+import React, { Component } from 'react';
+
+class Home extends Component {
+  render() {
+    return (
+        <div>
+          <h2>Home</h2>
+        </div>
+    );
+  }
+}
+
+export default Home;
+
+Contact.js
+
+import React, { Component } from 'react';
+
+class Contact extends Component {
+  render() {
+    return (
+        <div>
+          <h2>This is Contact Page</h2>
+        </div>
+    );
+  }
+}
+
+export default Contact;
+
+
+About.js
+
+import React, { Component } from 'react';
+
+class About extends Component {
+  render() {
+    return (
+        <div>
+          <h2>About</h2>
+        </div>
+    );
+  }
+}
+
+export default About;
+
+Step-4 Finally Add App.js on index.js & run your app.
+
+
+
