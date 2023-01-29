@@ -1,0 +1,107 @@
+1.Install following Packages..
+
+npm install bootstrap --save
+npm install react-bootstrap bootstrap
+npm install react-router-dom
+
+2.Add following files.
+
+1)BootstrapNavbar.js
+
+import React from 'react'
+import {
+BrowserRouter as Router,
+Switch,
+Route,
+} from "react-router-dom";
+import { Navbar,Nav,NavDropdown,Form,FormControl,Button } from 'react-bootstrap'
+import Home from './components/Home';
+import About from './components/About';
+import ContactUs from './components/Contact';
+class BootstrapNavbar extends React.Component{
+render(){
+return(
+<div>
+<div className="row">
+<div className="col-md-12">
+<Router>
+<Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+<Navbar.Brand href="#home">Bootstrap Navigation Bar</Navbar.Brand>
+<Navbar.Toggle aria-controls="basic-navbar-nav" />
+<Navbar.Collapse id="basic-navbar-nav">
+<Nav className="mr-auto">
+<Nav.Link href="/">Home</Nav.Link>
+<Nav.Link href="/contact">Contact Us</Nav.Link>
+<Nav.Link href="/About">About Us</Nav.Link>
+
+</Nav>
+</Navbar.Collapse>
+</Navbar>
+<br />
+<Switch>
+<Route exact path="/">
+<Home />
+</Route>
+<Route path="/About">
+<About />
+</Route>
+<Route path="/Contact">
+<ContactUs />
+</Route>
+</Switch>
+</Router>
+</div>
+</div>
+</div>
+)  
+}}
+export default BootstrapNavbar;
+
+---------------------------------------------------------------------------
+
+2)App.js
+
+import React from 'react';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import BootstrapNavbar from './BootstrapNavbar'
+function App() {  
+return (  
+<div className="App">  
+<BootstrapNavbar />  
+</div>  
+);  
+}  
+export default App;
+
+----------------------------------------------------------------------------------
+
+3.)Components Folder
+
+//Home.js
+const Home = () => {
+    return (
+        <h1>My Home Page</h1>
+    );
+}
+ 
+export default Home;
+
+//Contact.js
+
+const Contact = () => {
+    return (
+        <h1>My Contact Page</h1>
+    );
+}
+ 
+export default Contact;
+
+//About.js
+const About = () => {
+    return (
+        <h1>My About US Page..</h1>
+    );
+}
+ 
+export default About;
+
