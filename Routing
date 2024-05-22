@@ -92,7 +92,7 @@ Step-2
 Add below parts on App.js
 
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes,Link } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
@@ -111,16 +111,18 @@ class App extends Component {
           </ul>
           </nav>
           <hr />
-          <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/Contact' component={Contact} />
-              <Route path='/About' component={About} />
-          </Switch>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              </Routes>
         </div>
       </Router>
     );
   }
 }
+
+export default App;
 
 export default App;
 
